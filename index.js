@@ -51,3 +51,17 @@ const resetButton = document.getElementById("reset");
 startButton.addEventListener("click", start);
 stopButton.addEventListener("click", stop);
 resetButton.addEventListener("click", reset);
+
+// Add keyboard shortcuts
+document.addEventListener("keydown", (e) => {
+  if (e.code === "KeyS") {
+    start();
+    isRunning = true;
+  } else if (e.code === "Space") {
+    e.preventDefault();
+    stop();
+    isRunning = false;
+  } else if (e.code === "KeyR") {
+    reset();
+  }
+});
