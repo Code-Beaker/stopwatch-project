@@ -8,14 +8,32 @@
   </head>
   <body>
     <main
-      class="flex bg-violet-100 justify-center items-center min-h-[100dvh] relative"
+      class="flex bg-violet-100 justify-center items-center min-h-[100dvh] relative transition-colors"
     >
+      <div class="absolute top-0 flex gap-2 items-center p-4 right-0">
+        <p class="theme-label">Dark mode</p>
+        <button
+          aria-hidden="false"
+          id="theme-toggle"
+          class="toggle-theme-wrapper bg-slate-400 w-10 h-5 flex items-center p-[.15rem] relative rounded-full cursor-pointer"
+        >
+          <span
+            id="toggle-switch"
+            class="h-4 w-4 block transition rounded-full bg-white absolute translate-x-0"
+          ></span>
+        </button>
+      </div>
       <div
-        class="container bg-white rounded-2xl shadow-lg p-10 max-w-[30rem] text-center"
+        class="container bg-white rounded-2xl shadow-lg p-10 max-w-[23rem] md:max-w-[30rem] text-center"
       >
-        <h1 class="text-center text-3xl font-bold text-slate-500">Stopwatch</h1>
+        <h1
+          id="text-heading"
+          class="text-center text-3xl font-bold text-slate-500 transition-colors"
+        >
+          Stopwatch
+        </h1>
         <h2
-          class="time-display text-6xl text-slate-800 my-4 font-bold"
+          class="time-display text-5xl md:text-6xl text-slate-800 my-4 font-bold transition-colors"
           id="display"
         >
           00:00:00:00
@@ -25,31 +43,31 @@
           class="buttons flex items-center justify-center gap-2"
         >
           <button
-            class="bg-violet-500 text-lg flex items-center gap-2 block px-6 py-2 rounded-full text-white font-bold cursor-pointer hover:bg-violet-600 transition active:scale-95 active:bg-violet-700"
+            class="bg-violet-500 text-lg flex items-center gap-2 block px-4 md:px-6 py-2 rounded-full text-white font-bold cursor-pointer hover:bg-violet-600 transition active:scale-95 active:bg-violet-700"
             id="start"
           >
             Start <ion-icon name="play-outline"></ion-icon>
           </button>
           <button
-            class="bg-red-500 text-lg flex items-center gap-2 block px-6 py-2 rounded-full text-white font-bold cursor-pointer hover:bg-red-600 transition active:scale-95 active:bg-red-700"
+            class="bg-red-500 text-lg flex items-center gap-2 block px-4 md:px-6 py-2 rounded-full text-white font-bold cursor-pointer hover:bg-red-600 transition active:scale-95 active:bg-red-700"
             id="stop"
           >
             Stop <ion-icon name="stop-outline"></ion-icon>
           </button>
           <button
-            class="bg-slate-200 text-lg flex items-center gap-2 block px-6 py-2 rounded-full text-slate-800 font-bold cursor-pointer hover:bg-slate-300 transition active:scale-95 active:bg-slate-400"
+            class="bg-slate-200 text-lg flex items-center gap-2 block px-4 md:px-6 py-2 rounded-full text-slate-800 font-bold cursor-pointer hover:bg-slate-300 transition active:scale-95 active:bg-slate-400"
             id="reset"
           >
             Reset<ion-icon name="refresh-outline"></ion-icon>
           </button>
         </div>
       </div>
-      <div class="absolute bottom-0 right-0 p-4">
-        <h3 class="text-md font-semibold text-slate-700">Keyboard shortcuts</h3>
+      <div class="shortcuts absolute bottom-0 right-0 p-4 text-slate-600">
+        <h3 class="text-md font-semibold">Keyboard shortcuts</h3>
         <ul>
-          <li class="text-slate-700 text-sm">Start: <kbd>S</kbd></li>
-          <li class="text-slate-700 text-sm">Stop: <kbd>Space</kbd></li>
-          <li class="text-slate-700 text-sm">Reset: <kbd>R</kbd></li>
+          <li>Start: <kbd>S</kbd></li>
+          <li>Stop: <kbd>Space</kbd></li>
+          <li>Reset: <kbd>R</kbd></li>
         </ul>
       </div>
     </main>

@@ -65,3 +65,32 @@ document.addEventListener("keydown", (e) => {
     reset();
   }
 });
+
+// toggle theme
+const themeToggleButton = document.getElementById("theme-toggle");
+const wrapper = document.querySelector(".toggle-theme-wrapper");
+const themeSwitch = document.querySelector("#toggle-switch");
+
+// elements
+const bodyElement = document.querySelector(".bg-violet-100");
+const containerElement = document.querySelector(".container");
+const stopwatchHeading = document.querySelector("#text-heading");
+const themeLabel = document.querySelector(".theme-label");
+const keyboardShortcuts = document.querySelector(".shortcuts");
+
+themeToggleButton.addEventListener("click", () => {
+  wrapper.classList.toggle("bg-blue-500");
+  wrapper.classList.toggle("bg-slate-400");
+  themeSwitch.classList.toggle("translate-x-5");
+  bodyElement.classList.toggle("bg-slate-800");
+  bodyElement.classList.toggle("bg-violet-100");
+  containerElement.classList.toggle("bg-slate-600");
+  containerElement.classList.toggle("bg-white");
+  stopwatchHeading.classList.toggle("text-slate-400");
+  stopwatchHeading.classList.toggle("text-slate-500");
+  display.classList.toggle("text-slate-200");
+  display.classList.toggle("text-slate-800");
+  themeLabel.classList.toggle("text-slate-300");
+  keyboardShortcuts.classList.toggle("text-slate-300");
+  keyboardShortcuts.classList.toggle("text-slate-600");
+});
