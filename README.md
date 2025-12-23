@@ -8,6 +8,7 @@ Tools and software I used to build this project.
 - [Tailwind CSS](https://tailwindcss.com)
 - JavaScript
 - [Visual Studio Code](https://code.visualstudio.com)
+- Used [Transfonter Website](https://transfonter.org) to self-host the fonts
 
 ## Process
 
