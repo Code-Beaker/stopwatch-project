@@ -1,6 +1,6 @@
 :root {
-  --font-timer: "JetBrains Mono", monospace;
-  --font-text: "Zalando Sans", sans-serif;
+  --font-timer: "Google Sans Code", "JetBrains Mono", monospace;
+  --font-text: "Google Sans Flex", "Zalando Sans", sans-serif;
 }
 
 body {
